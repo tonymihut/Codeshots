@@ -1,0 +1,31 @@
+:root {
+  --gradient-start: 94, 40, 215;
+  --gradient-end: 217, 54, 122;
+  --gradient: linear-gradient(90deg, rgba(var(--gradient-start)), rgba(var(--gradient-end)));
+}
+
+.living-button {
+  background-image: var(--gradient);
+  border-radius: 8px;
+  border: none;
+  color: rgba(255, 255, 255, 80%);
+  font-size: 18px;
+  padding: 14px 28px;
+  text-shadow: 0 0 0 #fff;
+  transition: all 0.25s ease-out;
+}
+
+.living-button:hover {
+  box-shadow: 0 0 4px 0 rgba(var(--gradient-start), 80%), 0 4px 8px 2px rgba(var(--gradient-start), 40%),
+    0 12px 24px 8px rgba(var(--gradient-start), 60%);
+  color: rgba(255, 255, 255, 100%);
+  cursor: pointer;
+  text-shadow: 0 0 2px #fff;
+  transform: scale(1.02);
+}
+
+.living-button:active {
+  box-shadow: 0 0 4px 0 rgba(var(--gradient-start), 100%), 0 2px 4px 2px rgba(var(--gradient-start), 60%),
+    0 6px 12px 4px rgba(var(--gradient-start), 60%);
+  transform: scale(1.01);
+}
