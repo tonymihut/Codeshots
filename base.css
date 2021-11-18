@@ -2,6 +2,9 @@
 
 :root {
   --font-family: "Sen";
+  --purple: 94, 40, 215;
+  --pink: 217, 54, 122;
+  --gradient: linear-gradient(90deg, rgba(var(--purple)), rgba(var(--pink)));
 }
 
 * {
@@ -17,6 +20,5 @@
 }
 
 .container__constraint {
-  height: 300px;
-  width: 60vw;
+  width: 600px;
 }

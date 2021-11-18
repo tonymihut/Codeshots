@@ -1,0 +1,24 @@
+p {
+  font-size: 32px;
+}
+
+.bouncy-link {
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.bouncy-link span {
+  color: rgb(var(--purple));
+  display: inline-block;
+  transition: all 0.2s ease-out;
+}
+
+.bouncy-link span.spacer {
+  width: 3px;
+}
+
+.bouncy-link:hover > span {
+  color: rgb(var(--pink));
+  transform: translateY(-3px);
+}

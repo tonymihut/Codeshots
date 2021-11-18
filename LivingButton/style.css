@@ -1,9 +1,3 @@
-:root {
-  --gradient-start: 94, 40, 215;
-  --gradient-end: 217, 54, 122;
-  --gradient: linear-gradient(90deg, rgba(var(--gradient-start)), rgba(var(--gradient-end)));
-}
-
 .living-button {
   background-image: var(--gradient);
   border-radius: 8px;
@@ -16,8 +10,8 @@
 }
 
 .living-button:hover {
-  box-shadow: 0 0 4px 0 rgba(var(--gradient-start), 80%), 0 4px 8px 2px rgba(var(--gradient-start), 40%),
-    0 12px 24px 8px rgba(var(--gradient-start), 60%);
+  box-shadow: 0 0 4px 0 rgba(var(--purple), 60%), 0 4px 8px 2px rgba(var(--purple), 20%),
+    0 12px 24px 8px rgba(var(--purple), 40%);
   color: rgba(255, 255, 255, 100%);
   cursor: pointer;
   text-shadow: 0 0 2px #fff;
@@ -25,7 +19,7 @@
 }
 
 .living-button:active {
-  box-shadow: 0 0 4px 0 rgba(var(--gradient-start), 100%), 0 2px 4px 2px rgba(var(--gradient-start), 60%),
-    0 6px 12px 4px rgba(var(--gradient-start), 60%);
+  box-shadow: 0 0 4px 0 rgba(var(--purple), 80%), 0 2px 4px 2px rgba(var(--purple), 40%),
+    0 6px 12px 4px rgba(var(--purple), 40%);
   transform: scale(1.01);
 }

@@ -1,0 +1,35 @@
+@keyframes breathe {
+  0% {
+    background-size: 105% 105%;
+    transform: scale(1);
+  }
+  50% {
+    background-size: 200% 200%;
+    transform: scale(1.03);
+  }
+  100% {
+    background-size: 105% 105%;
+    transform: scale(1);
+  }
+}
+
+.breathing-button {
+  animation: breathe 4s infinite;
+  background: radial-gradient(60% 80%, rgb(var(--pink)), rgb(var(--purple)));
+  background-position: -1px -1px;
+  background-repeat: no-repeat;
+  background-size: 105% 105%;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  color: white;
+  font-size: 24px;
+  padding: 20px 40px;
+  text-shadow: 0 0 2px transparent;
+  transition: all 0.2s ease;
+}
+
+.breathing-button:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+  text-shadow: 0 0 1px white;
+}
