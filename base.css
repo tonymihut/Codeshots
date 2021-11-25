@@ -5,6 +5,9 @@
   --purple: 94, 40, 215;
   --pink: 217, 54, 122;
   --gradient: linear-gradient(90deg, rgba(var(--purple)), rgba(var(--pink)));
+  --gradient90: var(--gradient);
+  --gradientHalf: linear-gradient(90deg, rgba(var(--purple)) 50%, rgba(var(--pink)));
+  --gradientThreeQuarters: linear-gradient(90deg, rgba(var(--purple)) 75%, rgba(var(--pink)));
 }
 
 * {
@@ -20,5 +23,8 @@
 }
 
 .container__constraint {
+  align-items: center;
+  display: flex;
+  justify-content: center;
   width: 600px;
 }
