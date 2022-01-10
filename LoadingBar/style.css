@@ -43,13 +43,13 @@
 
 @keyframes shift-bar {
   0% {
-    box-shadow: 0.5em 0.2em 1.2em 0 rgb(var(--pink));
+    box-shadow: -0.25em 0.2em 1.2em 0 rgb(var(--purple));
   }
   50% {
-    box-shadow: -0.5em 0.2em 1.2em 0 rgb(var(--purple));
+    box-shadow: 0.25em 0.2em 1.2em 0 rgb(var(--pink));
   }
   100% {
-    box-shadow: 0.5em 0.2em 1.2em 0 rgb(var(--pink));
+    box-shadow: -0.25em 0.2em 1.2em 0 rgb(var(--purple));
   }
 }
 

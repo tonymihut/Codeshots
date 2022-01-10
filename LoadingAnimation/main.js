@@ -8,11 +8,9 @@ function animate() {
   function runAnimation() {
     const randomLeft = Math.floor(Math.random() * (right - left - width));
     const randomTop = Math.floor(Math.random() * (bottom - top - height));
-    const randomScale = Math.random() * (1.5 - 0.5) + 0.5;
-    animationFigure.style.transform = `translate(${randomLeft}px, ${randomTop}px) scale(${randomScale}) rotate(${
-      randomScale * 100
-    }deg)`;
-    animationFigure.style.boxShadow = `${randomScale * 2}px ${randomScale * 3}px ${randomScale * 5}px 0 rgba(0, 0, 0, ${
+    const randomScale = Math.random() * (2 - 1) + 1;
+    animationFigure.style.transform = `translate(${randomLeft}px, ${randomTop}px) scale(${randomScale})`;
+    animationFigure.style.boxShadow = `0 ${randomScale * 3}px ${randomScale * 5}px 0 rgba(0, 0, 0, ${
       1 / randomScale / 2
     })`;
     setTimeout(() => {
