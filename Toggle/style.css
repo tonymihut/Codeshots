@@ -1,0 +1,69 @@
+@keyframes animateKnob {
+  0% {
+    left: calc(var(--scale) * 0.3);
+    width: calc(var(--scale) * 3.9);
+  }
+  50% {
+    left: calc(var(--scale) * 0.3);
+    width: calc(100% - var(--scale) * 0.3);
+  }
+  100% {
+    left: calc(100% - var(--scale) * 0.3 - calc(var(--scale) * 3.9));
+    width: calc(var(--scale) * 3.9);
+  }
+}
+
+@keyframes animateKnobBackwards {
+  0% {
+    left: calc(100% - var(--scale) * 0.3 - calc(var(--scale) * 3.9));
+    width: calc(var(--scale) * 3.9);
+  }
+  50% {
+    left: calc(var(--scale) * 0.3);
+    width: calc(100% - var(--scale) * 0.3);
+  }
+  100% {
+    left: calc(var(--scale) * 0.3);
+    width: calc(var(--scale) * 3.9);
+  }
+}
+
+.toggle__container {
+  --scale: 10px;
+  --inactive-color: #aaa;
+  --transition-timing: 0.2s;
+  background-color: transparent;
+  border: calc(var(--scale) * 0.2) solid var(--inactive-color);
+  border-radius: calc(var(--scale) * 4.5);
+  height: calc(var(--scale) * 4.5);
+  position: relative;
+  transition: all var(--transition-timing) ease-out;
+  width: calc(var(--scale) * 12);
+}
+
+.toggle__container__knob {
+  animation: var(--transition-timing) ease-out forwards animateKnobBackwards;
+  background-color: var(--inactive-color);
+  border-radius: calc(var(--scale) * 3.9);
+  height: calc(var(--scale) * 3.9);
+  left: calc(var(--scale) * 0.3);
+  position: absolute;
+  transition: all var(--transition-timing) ease-out;
+  top: calc(var(--scale) * 0.3);
+  width: calc(var(--scale) * 3.9);
+}
+
+.toggle__container--active {
+  background-color: rgba(var(--purple), 0.1);
+  border-color: rgb(var(--purple));
+}
+
+.toggle__container__knob--active {
+  animation: var(--transition-timing) ease-out forwards animateKnob;
+  background-color: rgb(var(--purple));
+}
+
+.toggle__container:hover,
+.toggle__container__knob:hover {
+  cursor: pointer;
+}
