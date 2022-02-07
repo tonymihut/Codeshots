@@ -8,6 +8,7 @@ console.log(getComputedStyle(bouncyLink).letterSpacing);
 
 const replaceContent = () =>
   letters.forEach((letter, index) => {
+    
     const element = document.createElement("span");
     element.innerText = letter;
 
